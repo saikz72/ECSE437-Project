@@ -45,6 +45,7 @@
 .hud-prefix {
   text-align: center;
   font-size: 2rem;
+  font-weight: bold;
 }
 
 .hud-main-text {
@@ -63,6 +64,4 @@
   background-color: darkorange;
   width: 0%;
 }
-
-/* Footer */
 
