@@ -1,30 +1,68 @@
 .choice-container {
-    display: flex;
-    margin-bottom: 0.5rem;
-    width: 100%;
-    font-size: 1.8rem;
-    border: 0.1rem solid coral;
-    background-color:seashell;
-  }
-  
-  .choice-container:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 firebrick;
-    transform: translateY(-0.1rem);
-    transition: transform 100ms;
-  }
-   
-  .choice-prefix {
-    padding: 1.5rem 2.5rem;
-    background-color:bisque;
-    color:black;
-    font-weight: bolder;
-  }
-  
-  .choice-text {
-    padding: 1.5rem;
-    width: 100%;
-    font-weight: bold;
-  }
-  
-  
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: 0.1rem solid bisque;
+  background-color: whitesmoke;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 orangered;
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: orange;
+  color: black;
+  font-weight: bolder;
+}
+
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.correct {
+  background-color: darkgreen;
+}
+
+.incorrect {
+  background-color: darkred;
+}
+
+/* HUD */
+
+#hud {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hud-main-text {
+  text-align: center;
+}
+
+#progressBar {
+  width: 20rem;
+  height: 4rem;
+  border: 0.3rem solid darkred;
+  margin-top: 1.5rem;
+}
+
+#progressBarFull {
+  height: 3.4rem;
+  background-color: darkorange;
+  width: 0%;
+}
+
+/* Footer */
+
