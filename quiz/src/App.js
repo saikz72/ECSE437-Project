@@ -14,7 +14,7 @@ function App() {
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer">
-          Learn React
+          Welcome to ECSE 437 quiz
         </a>
       </header>
     </div>
