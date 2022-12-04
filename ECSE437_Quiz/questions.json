@@ -1,0 +1,26 @@
+[
+    {
+      "question": "Which is NOT a main state a file can reside in Git?",
+      "choice1": "Modified",
+      "choice2": "Staged",
+      "choice3": "Large",
+      "choice4": "Committed",
+      "answer": 3
+    },
+    {
+      "question": "What are the options for resetting the HEAD pointer in Git?",
+      "choice1": "soft, mixed, & hard",
+      "choice2": "easy, moderate, & difficult",
+      "choice3": "possible, probable, & impossible",
+      "choice4": "solid, liquid, and gas",
+      "answer": 1
+    },
+    {
+      "question": "Which is NOT a step for GCC compiling a C/C++ program into executable?",
+      "choice1": "Pre-processing",
+      "choice2": "Compilation",
+      "choice3": "Assembly",
+      "choice4": "Demolition",
+      "answer": 4
+    }
+  ]

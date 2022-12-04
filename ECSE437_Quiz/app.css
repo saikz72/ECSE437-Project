@@ -1,27 +1,14 @@
 :root {
-    background-color:antiquewhite;
-    font-size: 62.5%;
+  background-color: antiquewhite;
+  font-size: 62.5%;
 }
 
-*{
-    box-sizing: border-box;
-    font-family:'Times New Roman', Times, serif;
-    margin: auto;
-    padding: 0.25%;
-    color:firebrick;
-
-}
-
-.fixed-footer{
-  width: 100%;
-  position: fixed;        
-  background: firebrick;
-  padding: 10px 0;
-  color: white;
-  left: 0;
-  bottom: 0;
-  text-align: center;
-  font-size: 1.8rem;
+* {
+  box-sizing: border-box;
+  font-family:'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  color: crimson;
 }
 
 h1,
@@ -34,8 +21,7 @@ h4 {
 h1 {
   font-size: 5.4rem;
   color: crimson;
-  margin-bottom: flex;
-  padding: 2%;
+  margin-bottom: 5rem;
 }
 
 h1 > span {
@@ -60,8 +46,8 @@ h3 {
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center; /* center horizontally by default*/
-  align-items: center;  /*center vertically by default*/
+  justify-content: center;
+  align-items: center;
   max-width: 80rem;
   margin: 0 auto;
   padding: 2rem;
@@ -94,25 +80,24 @@ h3 {
 }
 
 /* BUTTONS */
-
 .btn {
   font-size: 1.8rem;
+  font-weight: bold;
   padding: 1rem 0;
   width: 20rem;
   text-align: center;
-  border: 0.1rem solid coral;
+  border: 0.1rem solid bisque;
   margin-bottom: 1rem;
-  text-decoration: none;
-  color:crimson;
-  background-color:lightsalmon;
-  font-weight: bolder;
+  text-decoration: wavy;
+  color: crimson;
+  background-color: lightsalmon;
 }
 
 .btn:hover {
   cursor: pointer;
-  box-shadow: 0 0.4rem 1.4rem 0 salmon;
+  box-shadow: 0 0.4rem 1.4rem 0 crimson;
   transform: translateY(-0.1rem);
-  transition: transform 100ms;
+  transition: transform 150ms;
 }
 
 .btn[disabled]:hover {
@@ -121,12 +106,27 @@ h3 {
   transform: none;
 }
 
+/* footer */ 
+
+.fixed-footer{
+  width: 100%;
+  position: fixed;        
+  background: firebrick;
+  padding: 10px 0;
+  color: white;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
 /* FORMS */
+
 form {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction:column;
+  align-items:center;
 }
 
 input {
@@ -135,11 +135,8 @@ input {
   padding: 1.5rem;
   font-size: 1.8rem;
   border: none;
-  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
 }
 
 input::placeholder {
-  color: #aaa;
+  color: lightslategray;
 }
-
-
