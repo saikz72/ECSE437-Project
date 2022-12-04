@@ -1,0 +1,50 @@
+
+name: Firebase CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+env:
+  Node_VERSION: '16.13.1'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ NODE_VERSION }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ env.Node_VERSION }}
+    - name: npm install, build and test
+      run: |
+        npm install
+        npm run build --if present
+        npm run test --if present
+
+    - name: Archive Build
+      uses: actions/upload-artifact@v3
+      with:
+        name: build
+        path: /quiz
+        
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download Build
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: /quiz
+      - name: Depoy to Firebase
+        uses:  FirebaseExtended/action-hosting-deploy@v0
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
