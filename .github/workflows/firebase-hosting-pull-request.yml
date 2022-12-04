@@ -8,14 +8,11 @@ jobs:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     defaults:
-      run:
+      run: 
         working-directory: ./quiz
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          npm install
-          npm ci
-          npm run build
+      - run: npm install && npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
